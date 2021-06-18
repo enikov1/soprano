@@ -64,7 +64,8 @@ for (let anchor of anchors) {
 }
 
 const button_active_popup = document.querySelectorAll('._js_popup_phone'),
-	  popup_phone = document.querySelector('#popup_phone');
+	  popup_phone = document.querySelector('#popup_phone'),
+	  popup_close = document.querySelector('.popup_close');
 
 button_active_popup.forEach(e => {
 	e.addEventListener('click', (event) => {
@@ -74,13 +75,17 @@ button_active_popup.forEach(e => {
 	});
 });
 
+popup_close.addEventListener('click', () => {
+	popup_phone.classList.remove('active');
+});
+
 if(popup_phone) {
 	document.addEventListener('click', (e) => {
 		const target = e.target,
-			  its_popup = target == popup_phone || popup_phone.contains(target),
+			  its_popup = target == popup_phone.querySelector('.popup') || popup_phone.querySelector('.popup').contains(target),
 			  its_btn_popup = target.classList.contains('_js_popup_phone'),
 			  popup_is_active = popup_phone.classList.contains('active');
-
+		console.log(its_popup);
 		if(!its_popup && !its_btn_popup && popup_is_active) {
 			popup_phone.classList.remove('active');
 		}
