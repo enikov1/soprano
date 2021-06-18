@@ -2317,6 +2317,13 @@ body {
   }
 }
 
+@media (max-width: 540px) {
+  .footer {
+    background: url(../img/footer_bg_x1.jpg) no-repeat top center;
+    background-size: cover;
+  }
+}
+
 .footer > .container {
   display: -webkit-box;
   display: -webkit-flex;
