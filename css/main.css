@@ -1766,6 +1766,13 @@ body {
   }
 }
 
+@media (max-width: 540px) {
+  .history {
+    background: url(../img/history_bg_x1.jpg) no-repeat top center;
+    background-size: cover;
+  }
+}
+
 .history_title {
   margin-bottom: 3rem;
 }
@@ -2010,6 +2017,13 @@ body {
 @media (max-width: 767px) {
   .message {
     padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .message {
+    background: url(../img/message_bg_x1.jpg) no-repeat top center;
+    background-size: cover;
   }
 }
 

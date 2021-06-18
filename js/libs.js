@@ -67,18 +67,18 @@ if(popup_phone) {
 	});
 }
 
-
-const inputPhone = document.querySelectorAll('._js_phone');
-
-if(inputPhone) {
-	inputPhone.forEach(e => {
-		Inputmask({"mask": "+7 (999) 999-99-99"}).mask(e);
-	});
-}
-
-// swiper
-
 setTimeout(() => {
+	const inputPhone = document.querySelectorAll('._js_phone');
+
+	if(inputPhone) {
+		inputPhone.forEach(e => {
+			Inputmask({"mask": "+7 (999) 999-99-99"}).mask(e);
+		});
+	}
+
+	// swiper
+
+
 	const workSlider = document.querySelector('#work_slider');
 
 	if (workSlider) {
